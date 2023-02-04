@@ -2,15 +2,15 @@
 
 if [[ $# -ne 2 ]]; then echo "Enter only two paths"; exit 1; fi
 
-if [[ ! -e $1 ]] || [[ ! -e $2 ]]
+if [[ ! -e $1 || ! -e $2 ]]
 then
 	echo "A file doesn't exist"
 	exit 1
-elif [[ ! -f $1 ]] || [[ ! -f $2 ]]
+elif [[ ! -f $1 || ! -f $2 ]]
 then
 	echo "A file isn't a regular file"
 	exit 1
-elif [[ ! -r $1 ]] || [[ ! -r $2 ]]
+elif [[ ! -r $1 || ! -r $2 ]]
 then
 	echo "A file doesn't have read permissions"
 	exit 1
